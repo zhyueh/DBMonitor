@@ -19,10 +19,11 @@ def handle(task,settings={}):
 def get_conn(db_setting):
     _host = db_setting.get('host',"localhost")
     _user = db_setting.get("user","root")
-    _password= db_setting.get("password","root")
-    _select_db= db_setting.get("select_db","mysql")
+    _password = db_setting.get("password","root")
+    _select_db = db_setting.get("select_db","mysql")
+    _charset = db_setting.get("charset","utf8")
 
-    return MySQLdb.connect(host=_host,user=_user,passwd=_password,db=_select_db)
+    return MySQLdb.connect(host=_host, user=_user, passwd=_password, db=_select_db, charset=_charset)
 
 def process(task,cursor,sql):
     logging.debug("query sql:%s"%(sql))
