@@ -1,4 +1,4 @@
 DBMonitor
 =========
 
-DBMonitor, using settings as crontab
+monitor database and then send email

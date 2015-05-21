@@ -1,0 +1,23 @@
+{
+    "task":{
+        "sql":"select * from db;"
+    },
+    "db_settings":{
+        "host":"127.0.0.1",
+        "port":3306,
+        "user":"root",
+        "password":"root",
+        "charset":"utf8",
+        "select_db":"mysql"
+    },
+    "email_settings":{
+        "smtp":"smtp.163.com",
+        "tls":"False",
+        "from":"robot_zhyueh@163.com",
+        "password":"123456&",
+        "to":["robot_zhyueh@163.com"],
+        "title":"daily report",
+        "body":"hi all,\n%s",
+        "formatter":"format_datatable"
+    }
+}
