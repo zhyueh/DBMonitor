@@ -44,7 +44,8 @@ class Monitor:
             sys.exit(1)
 
 if __name__ == '__main__':
-    logging.config.fileConfig("logging.conf")
+    logging_config_path = os.path.join(sys.path[0], "logging.conf")
+    logging.config.fileConfig(logging_config_path)
 
     if len(sys.argv) < 2:
         logging.info("no define config name")
